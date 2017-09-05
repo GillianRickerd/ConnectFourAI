@@ -60,7 +60,7 @@ class IndexTest(unittest.TestCase):
         play = Index.winInOnePlay(1, BoardStates.oneBlankTwoInRowStartingInColumn0)
         self.assertEqual(play, 1)
         play2 = Index.winInOnePlay(1, BoardStates.oneBlankTwoInRowStartingInColumn0_invalid)
-        self.assertEqual(play2, None)
+        self.assertIsNone(play2)
 
     def test_twoBlankOneInRow(self):
         # 1101
@@ -87,8 +87,8 @@ class IndexTest(unittest.TestCase):
         self.assertEqual(play3, 2)
         play4 = Index.blankThreeInRow(1, 3, Rows.blankThreeInRowStartingInColumn3)
         self.assertEqual(play4, 3)
-
-    # TODO: blank three in row not bottom row
+        playOnBoard = Index.winInOnePlay(1, BoardStates.blankThreeInRow_invalid)
+        self.assertIsNone(playOnBoard)
 
     # TODO: column
     # TODO: diagonals up to right
