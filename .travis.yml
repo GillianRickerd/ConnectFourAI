@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.6'
+script: python IndexTest.py
+notifications:
+  email:
+    recipients:
+    - gillianlemke97@gmail.com
+    on_success: never
+    on_failure: always
+  notifications:
+    slack: rickerd:E26aLSbnnWOD8BLP1eo7vUQR
+  slack:
+    secure: eCanFVQDXINk8LMILmkYwYr4dPDrvYBlgzTbwIYUHcs7umVxTrXWA+d0kWGHP5q3qSDYmTzlaV3Khwef1P8Nx8GTxVo0JvwZtf6tddcZP/YcA6rhMriUSLwr8MbI4IPyrRz1V+3YICSMpWSS9GZTxB3rwj5/nhk5S5UWP0Z+yslwWSqpl4xitgEHhAdn7b4+OlxgtOLX3//6Qj5cM0Nk8u7nQ1rBXmFg10XttyCCX+H5RS+pwtiUZmcsnU/MjulroBx9OGxg7Ty6Ue5kmmiY2snOXyzq07TDmXFozsizdHlZMjZiBqmwV44zcdWrhsN0Ph/io6GacaNiWfh1RXVnN5nPTEqKtGdaJPd26tYcEw5BiXxd87GlHVEuSpiveFdwq3RhDIx8/VVg5x4+skYxbwPw9Ek55T1HFXYO6t1JBDjBj03T6hi8PvUi7tPsf0TnqoWQAJrw7v7IFymcSG+I2lSaeWUNp9C5NtyB86oSSE0sVm4+ZC4rpgaeEQZi6unt0qnuTzjW9blJfgxzEu6pI8Bss+oX2p5QWPh3EGihji+0ZhvkQn76Skkvl0Xh1pWqaUVI9ziiDaIE/58O/ujlQEdLACoPj7XHPp83OFhzA4GrvBBX1M7ciBb+ZiJtwTanjMNpQbklbklZZ+as55u5GI9aJIGNJ6eINlFx/fUIFho=
