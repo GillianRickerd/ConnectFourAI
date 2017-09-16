@@ -69,12 +69,27 @@ class IndexTest(unittest.TestCase):
     play3 = Index.blankThreeInRow(1, 2, Rows.blankThreeInRowStartingInColumn2)
     self.assertEqual(play3, 2)
     play4 = Index.blankThreeInRow(1, 3, Rows.blankThreeInRowStartingInColumn3)
-    print(play4)
     self.assertEqual(play4, 3)
     playOnBoard = Index.winInOnePlay(1, BoardStates.blankThreeInRow_invalid)
     self.assertIsNone(playOnBoard)
 
-  # TODO: column
+  def test_threeInColumn(self):
+    """returns the open column if there is a column with three in a row"""
+    play = Index.threeInColumn(1, 0, 5, BoardStates.threeInColumn0)
+    self.assertEqual(play, 0)
+    play = Index.threeInColumn(1, 1, 5, BoardStates.threeInColumn1)
+    self.assertEqual(play, 1)
+    play = Index.threeInColumn(1, 2, 5, BoardStates.threeInColumn2)
+    self.assertEqual(play, 2)
+    play = Index.threeInColumn(1, 3, 5, BoardStates.threeInColumn3)
+    self.assertEqual(play, 3)
+    play = Index.threeInColumn(1, 4, 5, BoardStates.threeInColumn4)
+    self.assertEqual(play, 4)
+    play = Index.threeInColumn(1, 5, 5, BoardStates.threeInColumn5)
+    self.assertEqual(play, 5)
+    play = Index.threeInColumn(1, 6, 5, BoardStates.threeInColumn6)
+    self.assertEqual(play, 6)
+
   # TODO: diagonals up to right
   # TODO: diagonals down to right
     # TODO: construct diagonal and column methods???

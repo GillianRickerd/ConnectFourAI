@@ -56,3 +56,8 @@ class Index:
     if columnNumber <= 3 and rowState[columnNumber] == 0 and rowState[columnNumber + 1] == playerNumber and rowState[
     columnNumber + 2] == playerNumber and rowState[columnNumber + 3] == playerNumber:
       return columnNumber
+
+  def threeInColumn(playerNumber, columnNumber, row, boardState):
+    if row >= 3 and boardState[row][columnNumber] == playerNumber and boardState[row - 1][columnNumber] == playerNumber and boardState[
+    row - 2][columnNumber] == playerNumber and boardState[row - 3][columnNumber] == 0:
+      return columnNumber
