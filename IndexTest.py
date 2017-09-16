@@ -90,6 +90,23 @@ class IndexTest(unittest.TestCase):
     play = Index.threeInColumn(1, 6, 5, BoardStates.threeInColumn6)
     self.assertEqual(play, 6)
 
+  def test_threeInRightDiag(self):
+    """returns the open column if there are three in a row
+      up and to the right"""
+    play = Index.threeInRightDiag(1, 0, 5, BoardStates.threeInRightDiag0)
+    self.assertEqual(play, 3)
+    play2 = Index.threeInRightDiag(1, 1, 5, BoardStates.threeInRightDiag1)
+    self.assertEqual(play2, 4)
+    play3 = Index.threeInRightDiag(1, 2, 5, BoardStates.threeInRightDiag2)
+    self.assertEqual(play3, 5)
+    play4 = Index.threeInRightDiag(1, 3, 5, BoardStates.threeInRightDiag3)
+    self.assertEqual(play4, 6)
+    # Should return None because 4 in a row won't be possible
+    play5 = Index.threeInRightDiag(1, 4, 5, BoardStates.threeInRightDiag4)
+    self.assertIsNone(play5)
+    # TODO: check when row hits 0
+
+
   # TODO: diagonals up to right
   # TODO: diagonals down to right
     # TODO: construct diagonal and column methods???

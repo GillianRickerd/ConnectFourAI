@@ -61,3 +61,9 @@ class Index:
     if row >= 3 and boardState[row][columnNumber] == playerNumber and boardState[row - 1][columnNumber] == playerNumber and boardState[
     row - 2][columnNumber] == playerNumber and boardState[row - 3][columnNumber] == 0:
       return columnNumber
+
+  def threeInRightDiag(playerNumber, columnNumber, row, boardState):
+    if columnNumber <= 3 and row >= 3 and boardState[row][columnNumber] == playerNumber and boardState[
+    row - 1][columnNumber + 1] == playerNumber and boardState[row - 2][columnNumber + 2] == playerNumber and boardState[
+    row - 3][columnNumber + 3] == 0 and boardState[row - 2][columnNumber + 3] != 0:
+      return columnNumber + 3
