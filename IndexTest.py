@@ -104,8 +104,8 @@ class IndexTest(unittest.TestCase):
     # Should return None because 4 in a row won't be possible
     play5 = Index.threeInRightDiag(1, 4, 5, BoardStates.threeInRightDiag4)
     self.assertIsNone(play5)
-    # TODO: check when row hits 0
-
+    play6 = Index.threeInRightDiag(1, 3, 2, BoardStates.threeInRightDiag3Row2)
+    self.assertIsNone(play6)
 
   # TODO: diagonals up to right
   # TODO: diagonals down to right
