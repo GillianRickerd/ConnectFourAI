@@ -67,3 +67,9 @@ class Index:
     row - 1][columnNumber + 1] == playerNumber and boardState[row - 2][columnNumber + 2] == playerNumber and boardState[
     row - 3][columnNumber + 3] == 0 and boardState[row - 2][columnNumber + 3] != 0:
       return columnNumber + 3
+
+  def oneBlankTwoInRightDiag(playerNumber, columnNumber, row, boardState):
+    if columnNumber <= 3 and row >= 3 and boardState[row][columnNumber] == playerNumber and boardState[
+    row - 1][columnNumber + 1] == 0 and boardState[row - 2][columnNumber + 2] == playerNumber and boardState[
+    row - 3][columnNumber + 3] == playerNumber and boardState[row][columnNumber + 1] != 0:
+      return columnNumber + 1
