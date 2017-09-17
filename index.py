@@ -76,7 +76,16 @@ class Index:
 
   def twoBlankOneInRightDiag(playerNumber, columnNumber, row, boardState):
     if columnNumber <= 3 and row >= 3 and boardState[row][columnNumber] == playerNumber and boardState[
-        row - 1][columnNumber + 1] == playerNumber and boardState[row - 2][columnNumber + 2] == 0 and boardState[
-        row - 3][columnNumber + 3] == playerNumber and boardState[row][columnNumber + 1] != 0:
+    row - 1][columnNumber + 1] == playerNumber and boardState[row - 2][columnNumber + 2] == 0 and boardState[
+    row - 3][columnNumber + 3] == playerNumber and boardState[row - 1][columnNumber + 2] != 0:
       return columnNumber + 2
 
+  def blankThreeInRightDiag(playerNumber, columnNumber, row, boardState):
+    if columnNumber <= 3 and row >= 3 and boardState[row][columnNumber] == 0 and boardState[
+    row - 1][columnNumber + 1] == playerNumber and boardState[row - 2][columnNumber + 2] == playerNumber and boardState[
+    row - 3][columnNumber + 3] == playerNumber:
+      if row < 5:
+        if boardState[row + 1][columnNumber] != 0:
+          return columnNumber
+      else:
+        return columnNumber
