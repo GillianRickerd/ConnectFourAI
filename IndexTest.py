@@ -124,6 +124,23 @@ class IndexTest(unittest.TestCase):
     play6 = Index.oneBlankTwoInRightDiag(1, 3, 2, BoardStates.oneBlankTwoInRightDiag3Row2)
     self.assertIsNone(play6)
 
+  def test_twoBlankOneInRightDiag(self):
+    """returns the open column if there's two then blank then
+    one in the diag up and to the right"""
+    play = Index.twoBlankOneInRightDiag(1, 0, 5, BoardStates.twoBlankOneInRightDiag0)
+    self.assertEqual(play, 2)
+    play2 = Index.twoBlankOneInRightDiag(1, 1, 5, BoardStates.twoBlankOneInRightDiag1)
+    self.assertEqual(play2, 3)
+    play3 = Index.twoBlankOneInRightDiag(1, 2, 5, BoardStates.twoBlankOneInRightDiag2)
+    self.assertEqual(play3, 4)
+    play4 = Index.twoBlankOneInRightDiag(1, 3, 5, BoardStates.twoBlankOneInRightDiag3)
+    self.assertEqual(play4, 5)
+    # should return None
+    play5 = Index.twoBlankOneInRightDiag(1, 4, 5, BoardStates.twoBlankOneInRightDiag4)
+    self.assertIsNone(play5)
+    play6 = Index.twoBlankOneInRightDiag(1, 3, 2, BoardStates.twoBlankOneInRightDiag3Row2)
+    self.assertIsNone(play6)
+
   # TODO: diagonals up to right
   # TODO: diagonals down to right
     # TODO: construct diagonal and column methods???
